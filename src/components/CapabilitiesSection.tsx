@@ -1,20 +1,7 @@
-import { Wrench, Cpu, Cog, Box } from "lucide-react";
+import { Cpu, Cog, Box, Zap } from "lucide-react";
 
 const CapabilitiesSection = () => {
-  const machines = [
-    { name: "Planer Machine", description: "Mesin perata permukaan kayu" },
-    { name: "Table Saw", description: "Gergaji meja presisi tinggi" },
-    { name: "Bandsaw", description: "Gergaji pita untuk potongan kurva" },
-    { name: "Jointer", description: "Mesin penyambung kayu" },
-    { name: "Mortiser", description: "Mesin pembuat lubang mortise" },
-  ];
-
   const capabilities = [
-    {
-      icon: Wrench,
-      title: "Workshop Lengkap",
-      description: "Fasilitas workshop dengan mesin-mesin modern untuk produksi furniture berkualitas tinggi.",
-    },
     {
       icon: Cpu,
       title: "System Integration",
@@ -29,6 +16,11 @@ const CapabilitiesSection = () => {
       icon: Box,
       title: "End-to-End Solution",
       description: "Layanan menyeluruh dari desain, produksi, hingga instalasi.",
+    },
+    {
+      icon: Zap,
+      title: "Smart Technology",
+      description: "Implementasi teknologi pintar untuk meningkatkan efisiensi operasional.",
     },
   ];
 
@@ -49,51 +41,23 @@ const CapabilitiesSection = () => {
           <div className="w-24 h-1 bg-secondary mx-auto rounded-full mt-6" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Machines List */}
-          <div className="bg-card rounded-3xl p-8 shadow-card animate-fade-in-left" style={{ opacity: 0 }}>
-            <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-primary" />
+        {/* Capabilities Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in" style={{ opacity: 0 }}>
+          {capabilities.map((cap, index) => (
+            <div
+              key={cap.title}
+              className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 group"
+              style={{ animationDelay: `${0.1 * index}s` }}
+            >
+              <div className="w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-secondary/10 flex items-center justify-center mb-4 transition-colors">
+                <cap.icon className="w-7 h-7 text-primary group-hover:text-secondary transition-colors" />
               </div>
-              Peralatan Produksi
-            </h3>
-            <div className="space-y-4">
-              {machines.map((machine, index) => (
-                <div
-                  key={machine.name}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-secondary font-bold">{index + 1}</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">{machine.name}</h4>
-                    <p className="text-sm text-muted-foreground">{machine.description}</p>
-                  </div>
-                </div>
-              ))}
+              <h4 className="text-lg font-bold text-foreground mb-2">{cap.title}</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {cap.description}
+              </p>
             </div>
-          </div>
-
-          {/* Capabilities Grid */}
-          <div className="grid sm:grid-cols-2 gap-6 animate-fade-in-right" style={{ opacity: 0 }}>
-            {capabilities.map((cap, index) => (
-              <div
-                key={cap.title}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 group"
-                style={{ animationDelay: `${0.1 * index}s` }}
-              >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-secondary/10 flex items-center justify-center mb-4 transition-colors">
-                  <cap.icon className="w-7 h-7 text-primary group-hover:text-secondary transition-colors" />
-                </div>
-                <h4 className="text-lg font-bold text-foreground mb-2">{cap.title}</h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {cap.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,12 +1,12 @@
 const PartnersSection = () => {
   const partners = [
-    { name: "Telkom Indonesia", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Telkom_Indonesia_2013.svg/200px-Telkom_Indonesia_2013.svg.png" },
-    { name: "Telkom Akses", logo: "https://upload.wikimedia.org/wikipedia/id/thumb/e/e2/Telkom_Akses.svg/200px-Telkom_Akses.svg.png" },
-    { name: "Indosat", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Indosat_Ooredoo_Hutchison.svg/200px-Indosat_Ooredoo_Hutchison.svg.png" },
-    { name: "Sawang Architect", logo: null },
+    { name: "Telkom Indonesia", logo: "https://www.telkom.co.id/minio/show/data/image_upload/page/1594108255409_compress_logo%20telkom%20indonesia.png" },
+    { name: "Telkom Akses", logo: "https://images.seeklogo.com/logo-png/34/2/telkom-akses-logo-png_seeklogo-340460.png" },
+    { name: "Indosat", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Indosat_Ooredoo_logo_%282019%29.svg/2560px-Indosat_Ooredoo_logo_%282019%29.svg.png" },
+    { name: "Sawang Architect", logo: "https://cdn.projects.co.id/upload/usr183217/201808215b7b874e3dc5e.jpg" },
     { name: "Simetriline", logo: null },
-    { name: "JKS Net", logo: null },
-    { name: "PT. Inter Medialink Solusi", logo: null },
+    { name: "JKS Net", logo: "https://www.jks.co.id/wp-content/uploads/2020/01/Logo-jks-merah.png" },
+    { name: "PT. Inter Medialink Solusi", logo: "https://my.apjii.or.id/uploads/real/2254/logo_perusahaan2.png" },
   ];
 
   return (
