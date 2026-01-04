@@ -11,6 +11,7 @@ import {
 
 const ServicesSection = () => {
   const services = [
+    // Telekomunikasi & Internet - Layanan Utama
     {
       icon: Wifi,
       title: "Internet Broadband",
@@ -32,6 +33,14 @@ const ServicesSection = () => {
         "Sistem distribusi sinyal komunikasi dalam gedung untuk memastikan konektivitas optimal.",
       benefits: ["Signal Coverage", "Multi-operator", "Scalable Solution"],
     },
+    {
+      icon: MonitorSmartphone,
+      title: "Smart Queueing System",
+      description:
+        "Sistem antrian digital cerdas untuk meningkatkan efisiensi layanan pelanggan.",
+      benefits: ["Digital Display", "Mobile Integration", "Analytics Dashboard"],
+    },
+    // Konstruksi, Interior & Furniture
     {
       icon: Sofa,
       title: "Furniture Custom",
@@ -59,13 +68,6 @@ const ServicesSection = () => {
       description:
         "Jasa konstruksi komprehensif dari perencanaan hingga penyelesaian proyek.",
       benefits: ["Project Management", "Quality Control", "Tepat Waktu"],
-    },
-    {
-      icon: MonitorSmartphone,
-      title: "Smart Queueing System",
-      description:
-        "Sistem antrian digital cerdas untuk meningkatkan efisiensi layanan pelanggan.",
-      benefits: ["Digital Display", "Mobile Integration", "Analytics Dashboard"],
     },
   ];
 
